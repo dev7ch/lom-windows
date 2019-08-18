@@ -1,8 +1,8 @@
 import Vue from 'vue';
-import MyWindow from '@/window/index.vue';
+import MyWindow from './window/index.vue';
 import { StyleBlack, StyleWhite, StyleMetal, Default, StyleFactory } from './style';
 
-export { WindowResizeEvent, fixPosition } from '@/window/script';
+export { WindowResizeEvent, fixPosition } from './window/script';
 export { StyleBlack, StyleWhite, StyleMetal, Default, StyleFactory };
 
 export { windows } from './windows';
@@ -10,7 +10,7 @@ export { windows } from './windows';
 // export const WindowType = (MyWindow as any) as typeof import('./window/script').WindowType;
 
 
-const options = { prefix: 'lom-window' }
+const options = { prefix: 'lom-window' };
 
 const LomWindow = () => {
 
