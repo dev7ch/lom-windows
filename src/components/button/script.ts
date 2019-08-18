@@ -1,6 +1,6 @@
 import { WindowStyle, WINDOW_STYLE_KEY } from './../../style';
 import { Component, Vue, Prop, Inject } from 'vue-property-decorator';
-import { SinglePointerEvent } from '@/SinglePointerEvent';
+import { SinglePointerEvent } from './../..//SinglePointerEvent';
 
 @Component
 export class Button extends Vue {

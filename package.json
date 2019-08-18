@@ -1,6 +1,6 @@
 {
   "name": "@dev7ch/lom-windows",
-  "version": "0.3.0",
+  "version": "0.3.2",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name lom-windows ./src/index.ts",
