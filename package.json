@@ -1,6 +1,6 @@
 {
   "name": "@dev7ch/lom-windows",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -36,7 +36,7 @@
     "webpack-chain": "^6.0.0"
   },
   "description": "## Project setup ``` yarn install ```",
-  "main": "./dist/lomWindow.common.js",
+  "main": "./src/index.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dev7ch/lom-windows.git"

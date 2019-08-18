@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <lom-window-style-metal>
+    <lom-window-default>
 
       <lom-window title="Window 1" :close-button="true" :isOpen.sync="isOpen">
 
@@ -9,7 +9,7 @@
 
       <button @click="isOpen = ! isOpen">Toggle Window 1</button>
 
-    </lom-window-style-metal>
+    </lom-window-default>
   </div>
 </template>
 
@@ -19,8 +19,8 @@ import { Component, Vue } from 'vue-property-decorator';
 @Component({
     data() {
         return {
-            isOpen: true
-        }
+            isOpen: true,
+        };
     },
 })
 export default class App extends Vue {}

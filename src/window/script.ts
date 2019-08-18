@@ -1,12 +1,12 @@
 import { Component, Inject, Prop, Vue, Watch } from 'vue-property-decorator';
-import { naturalSize } from '../dom';
-import { DraggableHelper } from '../draggable_helper';
-import { ResizableHelper } from '../resizable_helper';
-import { WINDOW_STYLE_KEY, WindowStyle } from '../style';
-import { windows } from '../windows';
-import { ZElement } from '../z_element';
-import MyHeader  from './../header/index.vue';
-import MyButton from '../button/index.vue';
+import { naturalSize } from '@/dom';
+import { DraggableHelper } from '@/draggable_helper';
+import { ResizableHelper } from '@/resizable_helper';
+import { WINDOW_STYLE_KEY, WindowStyle } from '@/style';
+import { windows } from '@/windows';
+import { ZElement } from '@/z_element';
+import MyHeader from '@/header/index.vue';
+import MyButton from '@/button/index.vue';
 
 const instances: WindowType[] = [];
 

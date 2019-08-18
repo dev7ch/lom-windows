@@ -4,6 +4,7 @@
     "tslint:recommended"
   ],
   "linterOptions": {
+    "isolateModules": true,
     "exclude": [
       "src/**/*.png",
       "src/**/*.js.map",
@@ -17,6 +18,12 @@
     "no-consecutive-blank-lines": false,
     "object-literal-sort-keys": false,
     "ordered-imports": false,
+    "no-shadowed-variable": false,
+    "max-classes-per-file": false,
+    "triple-equals": false,
+    "variable-name": false,
+    "no-console": false,
+    "no-unused-expression": false,
     "quotemark": [true, "single"]
   }
 }
