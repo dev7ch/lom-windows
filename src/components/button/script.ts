@@ -1,4 +1,4 @@
-import { WindowStyle, WINDOW_STYLE_KEY } from '@/style';
+import { WindowStyle, WINDOW_STYLE_KEY } from './../../style';
 import { Component, Vue, Prop, Inject } from 'vue-property-decorator';
 import { SinglePointerEvent } from '@/SinglePointerEvent';
 
