@@ -1,18 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <lom-window-style-metal>
+
+      <lom-window title="Window 1" :close-button="true" :isOpen.sync="isOpen">
+
+        <h1>Hello Yeah</h1>
+      </lom-window>
+
+      <button @click="isOpen = ! isOpen">Toggle Window 1</button>
+
+    </lom-window-style-metal>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
 
 @Component({
-  components: {
-    HelloWorld,
-  },
+    data() {
+        return {
+            isOpen: true
+        }
+    },
 })
 export default class App extends Vue {}
 </script>

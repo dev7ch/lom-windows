@@ -5,6 +5,9 @@
   ],
   "linterOptions": {
     "exclude": [
+      "src/**/*.png",
+      "src/**/*.js.map",
+      "src/**/*.js",
       "node_modules/**"
     ]
   },

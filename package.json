@@ -1,25 +1,50 @@
 {
-  "name": "lom-windows",
+  "name": "@dev7ch/lom-windows",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
+  ],
   "dependencies": {
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
-    "vue-property-decorator": "^8.1.0"
+    "vue-property-decorator": "^8.1.0",
+    "vue-template-loader": "^1.0.0",
+    "webpack-stream": "^5.2.1"
   },
   "devDependencies": {
+    "@types/webpack-chain": "^5.2.0",
     "@vue/cli-plugin-babel": "^3.10.0",
     "@vue/cli-plugin-typescript": "^3.10.0",
     "@vue/cli-service": "^3.10.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
     "typescript": "^3.4.3",
-    "vue-template-compiler": "^2.6.10"
-  }
+    "vue-loader": "^15.7.1",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "4",
+    "webpack-chain": "^6.0.0"
+  },
+  "description": "## Project setup ``` yarn install ```",
+  "main": "./dist/lomWindow.common.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev7ch/lom-windows.git"
+  },
+  "author": "Silvan Hahn <silvan@dev7.ch>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dev7ch/lom-windows/issues"
+  },
+  "homepage": "https://github.com/dev7ch/lom-windows#readme"
 }
