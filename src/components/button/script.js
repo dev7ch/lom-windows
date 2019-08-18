@@ -1,7 +1,7 @@
 import * as tslib_1 from "tslib";
-import { WINDOW_STYLE_KEY } from '../style';
+import { WINDOW_STYLE_KEY } from '@/style';
 import { Component, Vue, Prop, Inject } from 'vue-property-decorator';
-import { SinglePointerEvent } from '../SinglePointerEvent';
+import { SinglePointerEvent } from '@/SinglePointerEvent';
 let Button = class Button extends Vue {
     constructor() {
         super(...arguments);

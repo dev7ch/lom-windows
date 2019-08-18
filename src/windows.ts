@@ -1,2 +1,2 @@
-import { WindowType } from './window/script';
+import { WindowType } from './components/window/script';
 export const windows = new Set<WindowType>();

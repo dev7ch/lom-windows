@@ -21,6 +21,11 @@ module.exports = {
                 .rule('vue')
                 .use('ts-loader')
                 .loader('ts-loader')
+
+            /*config.plugins.delete('html')
+            config.plugins.delete('preload')
+            config.plugins.delete('prefetch')*/
         }
+
     }
 }
