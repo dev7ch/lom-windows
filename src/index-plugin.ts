@@ -9,8 +9,8 @@ export const WindowType = (MyWindow as any) as typeof import('./components/windo
 
 export { windows } from './windows';
 
-export default {
-    install(vue: typeof Vue, options = { prefix: 'lom-window' }) {
+const Windows = {
+    install(vue: typeof Vue, options = {prefix: 'lom-window'}) {
         vue.component(`${options.prefix}`, MyWindow);
         vue.component(`${options.prefix}-default`, Default);
         vue.component(`${options.prefix}-black`, StyleBlack);
@@ -18,3 +18,5 @@ export default {
         vue.component(`${options.prefix}-metal`, StyleMetal);
     },
 };
+
+export default Windows;
