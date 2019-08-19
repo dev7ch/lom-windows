@@ -1,9 +1,9 @@
 {
   "name": "@dev7ch/lom-windows",
-  "version": "0.3.6",
+  "version": "0.3.8",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name lom-windows ./src/index.ts",
+    "build": "vue-cli-service build --target lib --name lom-windows ./src/index-plugin.ts",
     "lint": "vue-cli-service lint --fix"
   },
   "files": [

@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import App from './App.vue';
-import LomWindow from '@/index';
+import LomWindow from './index-plugin';
 Vue.config.productionTip = false;
 
 Vue.use(LomWindow);
