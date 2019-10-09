@@ -1,7 +1,8 @@
 {
   "name": "@dev7ch/lom-windows",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "scripts": {
+    "dev": "vue-cli-service serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib",
     "lint": "vue-cli-service lint --fix"
@@ -35,7 +36,7 @@
     "webpack": "4",
     "webpack-chain": "^6.0.0"
   },
-  "description": "## Project setup ``` yarn install ```",
+  "description": "LOM CH v2.0 draggable Windows plugin",
   "main": "./src/index.ts",
   "repository": {
     "type": "git",

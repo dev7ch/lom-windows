@@ -1,15 +1,11 @@
 <template>
   <div id="app">
     <lom-window-default>
-
       <lom-window title="Window 1" :close-button="true" :isOpen.sync="isOpen">
-
         <h1>Hello Yeah</h1>
       </lom-window>
-
-      <button @click="isOpen = ! isOpen">Toggle Window 1</button>
-
     </lom-window-default>
+    <button @click="isOpen = !isOpen">Toggle Window 1</button>
   </div>
 </template>
 

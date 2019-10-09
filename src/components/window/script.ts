@@ -79,9 +79,12 @@ export class WindowType extends Vue {
   @Prop({ default: 'visible' })
   public overflow!: string;
 
+  @Prop({ type: Boolean, default: true })
+  public isOpen!: boolean;
+
+
   @Inject(WINDOW_STYLE_KEY)
   public windowStyle!: WindowStyle;
-  public isOpen = true;
   public draggableHelper?: DraggableHelper;
   public resizableHelper?: ResizableHelper;
 
@@ -115,6 +118,7 @@ export class WindowType extends Vue {
 
   private openCount = 0;
 
+
   public mounted() {
     instances.push(this);
     this.zElement = new ZElement(this.zGroup, (zIndex) => this.zIndex = `${zIndex}`);
@@ -128,6 +132,10 @@ export class WindowType extends Vue {
     this.resizableHelper && this.resizableHelper.teardown();
     this.draggableHelper && this.draggableHelper.teardown();
     instances.splice(instances.indexOf(this), 1);
+  }
+
+  public closeButtonClick() {
+    this.isOpen = !this.isOpen;
   }
 
   public windowElement() {
@@ -154,7 +162,7 @@ export class WindowType extends Vue {
 
   @Watch('isOpen')
   public onIsOpenChange(isOpen: boolean) {
-    if (isOpen) {
+    if (this.isOpen) {
       this.$nextTick(() => {
         if (this.openCount++ == 0) {
           this.setWindowRect(this);
@@ -205,11 +213,6 @@ export class WindowType extends Vue {
   public onHeightChange(height: number) {
     this.setWindowRect({ height });
     this.onWindowResize(false);
-  }
-
-
-  public closeButtonClick() {
-      this.isOpen = !this.isOpen;
   }
 
   private setWindowRect({ width, height, top, left }: Partial<Rect>) {
@@ -373,7 +376,6 @@ export class WindowResizeEvent {
   constructor(readonly width: number, readonly height: number) { }
 }
 
-
 function leftTop(w: WindowType) {
   const el = w.windowElement();
   const left = parseFloat(el.style.left || 'NaN');
@@ -398,5 +400,5 @@ export function fixPosition() {
   });
 }
 
-
 window.addEventListener('resize', (e) => fixPosition());
+
