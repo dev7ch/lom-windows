@@ -31,7 +31,6 @@ export class WindowType extends Vue {
       color: '#000',
     };
 
-
     return { ...this.windowStyle.window, zIndex: this.zIndex, overflow: this.overflow };
   }
 
@@ -39,7 +38,7 @@ export class WindowType extends Vue {
 
     this.windowStyle.titlebar = {
         backgroundColor: 'rgb(0, 168, 149)',
-    }
+    };
     return this.windowStyle.titlebar;
   }
 
