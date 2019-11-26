@@ -2,7 +2,7 @@ import { Component, Inject, Prop, Vue, Watch } from 'vue-property-decorator';
 import { naturalSize } from './../../dom';
 import { DraggableHelper } from './../../draggable_helper';
 import { ResizableHelper } from './../../resizable_helper';
-import { WINDOW_STYLE_KEY, WindowStyle } from './../../style';
+import { WindowStyle, WINDOW_STYLE_KEY } from './../../style';
 import { windows } from './../../windows';
 import { ZElement } from './../../z_element';
 import MyHeader from './../header/index.vue';
@@ -24,10 +24,22 @@ interface Rect {
 export class WindowType extends Vue {
 
   get styleWindow() {
+    this.windowStyle.window = {
+      backgroundColor: '#fff',
+      border: '2px solid rgb(0, 168, 149)',
+      boxShadow: '0 0 2px rgbs(0, 168, 149, .4)',
+      color: '#000',
+    };
+
+
     return { ...this.windowStyle.window, zIndex: this.zIndex, overflow: this.overflow };
   }
 
   get styleTitlebar() {
+
+    this.windowStyle.titlebar = {
+        backgroundColor: 'rgb(0, 168, 149)',
+    }
     return this.windowStyle.titlebar;
   }
 

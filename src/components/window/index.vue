@@ -9,6 +9,7 @@
             </template>
             <template v-else>{{title}}</template>
           </div>
+          <slot name="close" />
           <template v-slot:closeButton>
             <my-button class="close" @click="closeButtonClick"></my-button>
           </template>
@@ -16,6 +17,12 @@
       </div>
       <div class="content" :style="styleContent" ref="content">
         <slot />
+      </div>
+      <div class="actions">
+        <slot name="lom-actions"></slot>
+      </div>
+      <div class="lom-footer">
+        <slot name="lom-footer"></slot>
       </div>
     </div>
   </transition>
@@ -31,13 +38,13 @@ export default WindowType;
   display: flex;
   flex-flow: column;
   position: absolute;
-  border-radius: 4pt 4pt 0 0;
+  border-radius: 4pt;
 }
 
 .titlebar {
   display: flex;
   flex-flow: row nowrap;
-  border-radius: 4pt 4pt 0 0;
+  border-radius: 0 0 0 0;
   font-family: sans-serif;
   padding: 0.5em;
   flex: 0 0 auto;

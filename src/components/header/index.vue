@@ -1,14 +1,14 @@
 <template>
   <div class="header">
     <div class="bullets">
-      <slot name="button-1">
-        <span class="bullet bullet-green"></span>
-      </slot>
-      <slot name="button-2">
-        <span class="bullet bullet-yellow"></span>
-      </slot>
+<!--      <slot name="button-1">-->
+<!--        <span class="bullet bullet-green"></span>-->
+<!--      </slot>-->
+<!--      <slot name="button-2">-->
+<!--        <span class="bullet bullet-yellow"></span>-->
+<!--      </slot>-->
       <template v-if="$parent.closeButton">
-        <span class="bullet bullet-red">
+        <span class="bullet bullet-yellow">
           <slot name="closeButton"/>
         </span>
       </template>
@@ -37,7 +37,7 @@ export default Header;
     flex: 1 1 320px;
     text-align: center;
     font-size: 12px;
-    color: #766F79;
+    color: white;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

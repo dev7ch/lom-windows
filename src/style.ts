@@ -14,7 +14,7 @@ export interface WindowStyle {
 }
 
 
-export const WINDOW_STYLE_KEY = '@hscmap/vue-window/windowStyle';
+export const WINDOW_STYLE_KEY = 'windowStyle';
 
 
 export function StyleFactory(windowStyle: WindowStyle): vue.ComponentOptions<Vue> {
@@ -31,13 +31,13 @@ export function StyleFactory(windowStyle: WindowStyle): vue.ComponentOptions<Vue
 
 export const Default: vue.ComponentOptions<Vue> = StyleFactory({
   window: {
-    border: '1px solid #ccc;',
-    color: '#000',
-    boxShadow: '0 0 2px rgba(007, 007, 007, 0.75)',
-    backgroundColor: '#efefef',
+    border: '1px solid #00A895;',
+    color: 'red',
+    boxShadow: '0 0 2px rgba(0, 168, 149, 0.75)',
+    backgroundColor: 'red',
   },
   titlebar: {
-    backgroundColor: '#efefef',
+    backgroundColor: 'rgb(0, 168, 149)',
   },
   content: {
   },
@@ -57,7 +57,7 @@ export const StyleBlack: vue.ComponentOptions<Vue> = StyleFactory({
   window: {
     color: '#fff',
     boxShadow: '0 0 6pt rgba(255, 255, 255, 0.75)',
-    backgroundColor: 'rgba(31, 31, 31, 0.9)',
+    backgroundColor: 'red',
   },
   titlebar: {
     backgroundColor: 'rgba(63, 63, 63, 0.9)',
@@ -81,7 +81,7 @@ export const StyleWhite: vue.ComponentOptions<Vue> = StyleFactory({
   window: {
     color: '#000',
     boxShadow: '0 2pt 4pt rgba(0, 0, 0, 0.5)',
-    backgroundColor: 'rgba(239, 239, 239, 0.95)',
+    backgroundColor: 'rgba(0, 168, 149, 0.95)',
   },
   titlebar: {
     backgroundColor: 'rgba(191, 191, 191, 0.9)',
