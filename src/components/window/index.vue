@@ -1,7 +1,7 @@
 <template>
   <transition name="fade" @after-leave="$emit('close')" @after-enter="$emit('open')">
     <div v-show="isOpen" class="window" :style="styleWindow" ref="window" @mousedown="activate" @touchstart="activate">
-      <div class="titlebar" :style="styleTitlebar" ref="titlebar">
+      <div :style="styleTitlebar" class="titlebar" ref="titlebar">
         <my-header>
           <div class="title">
             <template v-if="$slots.title">
