@@ -18,11 +18,11 @@
       <div class="content" :style="styleContent" ref="content">
         <slot />
       </div>
-      <div class="actions">
-        <slot name="lom-actions"></slot>
+      <div class="lom-actions">
+        <slot name="actions"></slot>
       </div>
       <div class="lom-footer">
-        <slot name="lom-footer"></slot>
+        <slot name="footer"></slot>
       </div>
     </div>
   </transition>
